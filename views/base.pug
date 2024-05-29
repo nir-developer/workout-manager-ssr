@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Parcel Express Pug App
+        link(rel="stylesheet" href="/styles.css")
+    
+    body
+        //- div#app
+        header
+            include _header
+
+        block content
+           h1 THIS IS MAIN CONTENT - SHOULD NOT BE OUTPUT !! SINCE SHOULD BE OVERRIDEN!!
+        
+        footer
+            include _footer
+
+
+
+        script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+       
+        //- REFER TO SRC - NOT TO DIST!
+        script(src="/main.js" type="module" defer)
+    
